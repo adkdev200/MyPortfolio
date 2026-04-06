@@ -4,26 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev Adhikari | AI Systems & Backend Engineer</title>
+  <title>Dev Adhikari</title>
   <link rel="icon" type="image/png" href="myprofilepic.png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    :root {
-      --bg-dark: #05070c;
-      --bg-light: #f5f7fb;
-      --text-dark: #e9edf5;
-      --text-light: #0b0f14;
-      --neon: #00f5ff;
-      --neon-2: #7cffc4;
-      --neon-soft: rgba(0, 245, 255, 0.25);
-      --card-dark: #0d1220;
-      --card-light: #ffffff;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -32,381 +18,82 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #0b1328, #04060b);
-      color: var(--text-dark);
-      transition: 0.4s;
-      overflow-x: hidden;
-    }
-
-    body.light {
-      background: linear-gradient(180deg, #ffffff, #eef2f7);
-      color: var(--text-light);
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 18px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      backdrop-filter: blur(14px);
-      background: rgba(0, 0, 0, 0.35);
-    }
-
-    nav h1 {
-      color: var(--neon);
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
-
-    nav button {
-      background: transparent;
-      border: 1px solid var(--neon);
-      color: var(--neon);
-      padding: 8px 18px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .hero {
+      background: #05070c;
+      color: #c8cdd8;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 140px 20px 80px;
+      padding: 40px 20px;
     }
 
-    .hero h2 {
-      font-size: 52px;
-      font-weight: 900;
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #f0f2f5;
+      margin-bottom: 12px;
     }
 
-    .hero span {
-      color: var(--neon);
+    .bio {
+      max-width: 420px;
+      font-size: 15px;
+      line-height: 1.8;
+      opacity: 0.45;
+      font-weight: 300;
+      margin-bottom: 32px;
     }
 
-    .typing {
-      margin-top: 14px;
+    .links {
+      display: flex;
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    .links a {
+      color: rgba(255, 255, 255, 0.35);
       font-size: 20px;
-      opacity: 0.9;
-      min-height: 1.5em;
-      /* Prevent layout shift */
-    }
-
-    .hero-metrics {
-      margin-top: 50px;
-      display: flex;
-      gap: 50px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .metric h3 {
-      color: var(--neon);
-      font-size: 30px;
-    }
-
-    .metric p {
-      opacity: 0.8;
-    }
-
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--neon);
-      box-shadow: 0 0 20px var(--neon-soft);
-      margin-bottom: 20px;
-    }
-
-    section {
-      padding: 110px 10%;
-    }
-
-    .section-title {
-      font-size: 36px;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 0;
-      width: 80px;
-      height: 3px;
-      background: var(--neon);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: var(--card-dark);
-      padding: 32px;
-      border-radius: 18px;
-      border: 1px solid transparent;
-      transition: 0.4s;
-    }
-
-    body.light .card {
-      background: var(--card-light);
-    }
-
-    .card:hover {
-      transform: translateY(-12px);
-      border-color: var(--neon);
-      box-shadow: 0 0 40px var(--neon-soft);
-    }
-
-    .card h3 {
-      color: var(--neon);
-      margin-bottom: 14px;
-    }
-
-    .skill {
-      margin-bottom: 18px;
-    }
-
-    .skill span {
-      font-size: 14px;
-    }
-
-    .bar {
-      height: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      overflow: hidden;
-      margin-top: 6px;
-    }
-
-    .bar div {
-      height: 100%;
-      background: linear-gradient(90deg, var(--neon), var(--neon-2));
-      width: 100%;
-    }
-
-    .btn-show-code {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 8px 16px;
-      font-size: 14px;
-      color: var(--neon);
-      border: 1px solid var(--neon);
-      border-radius: 6px;
+      transition: 0.3s;
       text-decoration: none;
-      transition: 0.3s;
     }
 
-    .btn-show-code:hover {
-      background: var(--neon);
-      color: var(--bg-dark);
+    .links a:hover {
+      color: rgba(255, 255, 255, 0.7);
     }
 
-    .btn-download {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 28px;
-      font-size: 16px;
-      color: var(--bg-dark);
-      background: var(--neon);
-      border-radius: 30px;
+    .resume {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.3);
       text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 0 15px var(--neon-soft);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 20px;
+      border-radius: 20px;
       transition: 0.3s;
+      font-weight: 400;
     }
 
-    .btn-download:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px var(--neon);
-    }
-
-    footer {
-      text-align: center;
-      padding: 70px;
-      opacity: 0.7;
-    }
-
-    .social-links {
-      margin-top: 25px;
-      display: flex;
-      gap: 25px;
-    }
-
-    .social-links a {
-      color: var(--text-dark);
-      font-size: 26px;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      color: var(--neon);
-      transform: translateY(-5px);
-      text-shadow: 0 0 20px var(--neon);
+    .resume:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <h1>DEV</h1>
-    <button id="themeToggle">Theme</button>
-  </nav>
+  <h1>Dev Adhikari</h1>
+ 
+  </p>
 
-  <section class="hero">
-    <img src="myprofilepic.png" alt="Dev Adhikari" class="profile-pic">
-    <h2>Dev <span>Adhikari</span></h2>
-    <p class="typing" id="typing"></p>
+  <div class="links">
+    <a href="https://github.com/adkdev200-ops" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/adkdev200/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/adkdev200/" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
 
-    <div class="social-links">
-      <a href="https://www.facebook.com/adkdev200/" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/adkdev200/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/adkdev200-ops" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
 
-    <a href="Dev_Resume.pdf" download class="btn-download"><i class="fas fa-download" style="margin-right: 8px;"></i>
-      Download Resume</a>
-
-    <div class="hero-metrics">
-      <div class="metric">
-        <h3>AI Systems</h3>
-        <p>End‑to‑End Design</p>
-      </div>
-      <div class="metric">
-        <h3>Backend APIs</h3>
-        <p>Production‑Ready</p>
-      </div>
-      <div class="metric">
-        <h3>Agentic AI</h3>
-        <p>Autonomous Workflows</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Professional Summary</h2>
-    <p style="line-height: 1.8; opacity: 0.9; font-size: 1.1rem;">
-     Highly driven Computer Engineering student with hands-on expertise in Machine Learning, Deep Learning, NLP, and 
-      Generative AI. Proven track record building intelligent AI systems — from RAG pipelines and real-time computer vision 
-      to full-stack web applications. Proficient in Hugging Face Transformers, Model Context Protocol (MCP) for agentic 
-      workflows, and FAISS-powered vector search</p>
-  </section>
-
-  <section>
-    <h2 class="section-title">Core Skills</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Machine Learning & NLP</h3>
-        <p>Scikit-learn, XGBoost, Hugging Face Transformers, NLTK, spaCy, Sentiment Analysis, NER, SHAP.</p>
-      </div>
-      <div class="card">
-        <h3>Deep Learning & CV</h3>
-        <p>PyTorch, TensorFlow, CNNs (ResNet, VGG, EfficientNet), Transfer Learning, Image Processing.</p>
-      </div>
-      <div class="card">
-        <h3>Generative AI & MCP</h3>
-        <p>Agentic AI, Model Context Protocol, LLM APIs, Advanced Prompt Engineering, Injection Defense.</p>
-      </div>
-      <div class="card">
-        <h3>RAG & Vector Search</h3>
-        <p>FAISS, Semantic Search, Document & Multimedia Indexing, Multimodal Q&A Pipelines.</p>
-      </div>
-      <div class="card">
-        <h3>Backend Application</h3>
-        <p>Django, FastAPI, DRF, WebSockets, REST, JWT Auth.</p>
-      </div>
-      <div class="card">
-        <h3>Database & Env</h3>
-        <p>PostgreSQL, Redis Caching, Cloud-ready deployments on Windows and Linux.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Project Experience</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Social Media Application</h3>
-        <p>Built a full-featured backend supporting user profiles, posts, likes, and real-time messaging via WebSockets
-          using Django, DRF, JWT, Redis, and PostgreSQL.</p>
-        <a href="https://github.com/adkdev200-ops/MinMed" class="btn-show-code">Show Code</a>
-      </div>
-      <div class="card">
-        <h3>Chat with YouTube Videos</h3>
-        <p>Architected a full RAG pipeline that transcribes, chunks, and embeds YouTube content into Chroma for
-          intelligent conversational Q&A using LLMs.</p>
-        <a href="https://github.com/adkdev200-ops/Yt_Chat" class="btn-show-code">Show Code</a>
-      </div>
-      <div class="card">
-        <h3>Brain Tumor Detection</h3>
-        <p>Clinical-grade CNN classifier on MRI scans using ResNet transfer learning, deployed via REST API.</p>
-        <a href="notavailable.html" class="btn-show-code">Show Code</a>
-      </div>
-      <div class="card">
-        <h3>Doppelganger Finder</h3>
-        <p>Real-time facial similarity engine using deep embedding extraction (FaceNet) and FAISS-powered approximate
-          nearest-neighbor search.</p>
-        <a href="notavailable.html" class="btn-show-code">Show Code</a>
-      </div>
-      <div class="card">
-        <h3>Movie Recommendation System</h3>
-        <p>High-performance recommendation engine using collaborative filtering, matrix factorization, and content-based
-          similarity with a scalable REST API.</p>
-        <a href="notavailable.html" class="btn-show-code">Show Code</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Education</h2>
-    <div class="card" style="text-align: center;">
-      <h3>Bachelor of Engineering in Computer Engineering</h3>
-      <p style="margin-top: 10px; opacity: 0.9;">Thapathali Campus, Institute of Engineering (IOE) — Tribhuvan
-        University, Nepal</p>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Dev Adhikari — AI Systems & Backend Engineer
-  </footer>
-
-  <script>
-    document.getElementById('themeToggle').onclick = () => document.body.classList.toggle('light');
-
-    const roles = [
-      'AI Systems Engineer',
-      'Backend‑Focused ML Developer',
-      'Agentic AI Builder',
-      'Computer Engineering Student'
-    ];
-
-    let i = 0, j = 0, del = false;
-    const el = document.getElementById('typing');
-
-    function type() {
-      if (!del && j <= roles[i].length) el.textContent = roles[i].slice(0, j++);
-      else if (del && j >= 0) el.textContent = roles[i].slice(0, j--);
-
-      if (j === roles[i].length) del = true;
-      if (del && j === 0) { del = false; i = (i + 1) % roles.length; }
-
-      setTimeout(type, del ? 50 : 90);
-    }
-    type();
-  </script>
 
 </body>
 
