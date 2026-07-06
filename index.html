@@ -1,100 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev Adhikari</title>
+  <title>Dev Adhikari | Portfolio</title>
+  <meta name="description" content="Portfolio of Dev Adhikari, featuring projects in Machine Learning, AI, and Web Development.">
   <link rel="icon" type="image/png" href="myprofilepic.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    :root {
+      --bg: #050505;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(255, 255, 255, 0.06);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #8b5cf6;
+      --gradient: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
     }
 
     body {
-      background: #05070c;
-      color: #c8cdd8;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    header {
       text-align: center;
-      padding: 40px 20px;
+      margin-bottom: 80px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .profile-pic-container {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      padding: 4px;
+      background: var(--gradient);
+    }
+
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: var(--bg);
+      border: 4px solid var(--bg);
     }
 
     h1 {
-      font-size: 32px;
-      font-weight: 600;
-      color: #f0f2f5;
-      margin-bottom: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
 
     .bio {
-      max-width: 420px;
-      font-size: 15px;
-      line-height: 1.8;
-      opacity: 0.45;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      font-size: 18px;
+      color: var(--text-muted);
       font-weight: 300;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
       margin-bottom: 32px;
     }
 
-    .links {
+    .social-links a {
+      color: var(--text-muted);
+      font-size: 24px;
+      transition: all 0.3s ease;
       display: flex;
-      gap: 22px;
-      margin-bottom: 28px;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      text-decoration: none;
     }
 
-    .links a {
-      color: rgba(255, 255, 255, 0.35);
+    .social-links a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -10px rgba(139, 92, 246, 0.5);
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-title::after {
+      content: '';
+      height: 1px;
+      flex-grow: 1;
+      background: linear-gradient(90deg, var(--card-border), transparent);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      backdrop-filter: blur(10px);
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      background: var(--card-hover);
+      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .project-icon {
+      font-size: 24px;
+      color: var(--accent);
+    }
+
+    .project-links a {
+      color: var(--text-muted);
       font-size: 20px;
-      transition: 0.3s;
-      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .project-links a:hover {
+      color: #fff;
     }
 
-    .links a:hover {
-      color: rgba(255, 255, 255, 0.7);
+    .project-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #fff;
     }
 
-    .resume {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.3);
-      text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 8px 20px;
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 6px 12px;
       border-radius: 20px;
-      transition: 0.3s;
-      font-weight: 400;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    
+    .project-card:hover .tag {
+      background: rgba(255, 255, 255, 0.1);
     }
 
-    .resume:hover {
-      border-color: rgba(255, 255, 255, 0.3);
-      color: rgba(255, 255, 255, 0.5);
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Staggered animation delays for cards */
+    .projects-grid > a:nth-child(1) { animation-delay: 0.1s; }
+    .projects-grid > a:nth-child(2) { animation-delay: 0.2s; }
+    .projects-grid > a:nth-child(3) { animation-delay: 0.3s; }
+    .projects-grid > a:nth-child(4) { animation-delay: 0.4s; }
+    .projects-grid > a:nth-child(5) { animation-delay: 0.5s; }
+    .projects-grid > a:nth-child(6) { animation-delay: 0.6s; }
+    .projects-grid > a:nth-child(7) { animation-delay: 0.7s; }
+    .projects-grid > a:nth-child(8) { animation-delay: 0.8s; }
+    .projects-grid > a:nth-child(9) { animation-delay: 0.9s; }
+    .projects-grid > a:nth-child(10) { animation-delay: 1.0s; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 36px; }
+      .projects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-
 <body>
 
-  <h1>Dev Adhikari</h1>
- 
-  </p>
+  <div class="container">
+    <header>
+      <div class="profile-pic-container">
+        <img src="myprofilepic.png" alt="Dev Adhikari" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Dev+Adhikari&background=random&color=fff&size=120'">
+      </div>
+      <h1>Dev Adhikari</h1>
+      <p class="bio">Passionate Developer exploring Machine Learning, AI Agents, and Full-Stack Web Development. Building tools and models that solve real-world problems.</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/adkdev200-ops" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/adkdev200/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/adkdev200/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:adkdev200@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </header>
 
-  <div class="links">
-    <a href="https://github.com/adkdev200-ops" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/adkdev200/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/adkdev200/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <main>
+      <h2 class="section-title fade-in-up">Featured Projects</h2>
+      
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <a href="https://github.com/adkdev200-ops/research_workflow" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-diagram-project project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">AI Research Workflow</h3>
+          <p class="project-desc">A multi-step research workflow built with LangGraph that takes any topic and produces a well-structured, citation-heavy research report.</p>
+          <div class="project-tags">
+            <span class="tag">LangGraph</span>
+            <span class="tag">AI Agents</span>
+            <span class="tag">Python</span>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://github.com/adkdev200-ops/CCPA-Compliance-RAG-System" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-shield-halved project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">CCPA Compliance RAG</h3>
+          <p class="project-desc">A lightweight RAG system analyzing text scenarios for CCPA violations using Qwen2.5-1.5B LLM, ChromaDB, and FastAPI.</p>
+          <div class="project-tags">
+            <span class="tag">RAG</span>
+            <span class="tag">LLM</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Python</span>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://github.com/adkdev200-ops/English-to-Hindi--Transformer-from-scratch-" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-language project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">Transformer From Scratch</h3>
+          <p class="project-desc">Implementation of the 'Attention is All You Need' paper. Built a Transformer from scratch and trained it for English to Hindi translation.</p>
+          <div class="project-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Deep Learning</span>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="https://github.com/adkdev200-ops/Analysing-Stocks-using-Transformer" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-chart-line project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">Stock Prediction Transformer</h3>
+          <p class="project-desc">Transformer-based model for stock movement prediction analyzing historical data from 100 US Companies.</p>
+          <div class="project-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Transformer</span>
+            <span class="tag">Python</span>
+          </div>
+        </a>
+
+        <!-- Project 5 -->
+        <a href="https://github.com/adkdev200-ops/Real-time-emotion-detector" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-face-smile project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">Real-Time Emotion Detector</h3>
+          <p class="project-desc">Computer Vision emotion detection system created by fine-tuning Vision Transformer (ViT) in PyTorch.</p>
+          <div class="project-tags">
+            <span class="tag">ViT</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">PyTorch</span>
+          </div>
+        </a>
+
+        <!-- Project 6 -->
+        <a href="https://github.com/adkdev200-ops/BERT-fine-tuned-for-Sentiment-Analysis" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-comments project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">BERT Sentiment Analysis</h3>
+          <p class="project-desc">Fine-tuned BERT uncased model using PyTorch on a large Twitter dataset for accurate sentiment analysis.</p>
+          <div class="project-tags">
+            <span class="tag">BERT</span>
+            <span class="tag">NLP</span>
+            <span class="tag">PyTorch</span>
+          </div>
+        </a>
+
+        <!-- Project 7 -->
+        <a href="https://github.com/adkdev200-ops/Yt_Chat" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-brands fa-youtube project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">YouTube Chat AI</h3>
+          <p class="project-desc">A web application that takes a YouTube video URL and allows you to interactively chat with an AI about the video's content.</p>
+          <div class="project-tags">
+            <span class="tag">AI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Web</span>
+          </div>
+        </a>
+
+        <!-- Project 8 -->
+        <a href="https://github.com/adkdev200-ops/ecommerce-project" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-cart-shopping project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">E-Commerce Platform</h3>
+          <p class="project-desc">Full-stack e-commerce website with product management, cart functionality, and user authentication.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Django</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </a>
+
+        <!-- Project 9 -->
+        <a href="https://github.com/adkdev200-ops/Url_shortener" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-link project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">URL Shortener</h3>
+          <p class="project-desc">A fast and reliable URL shortener web application allowing users to generate compact, manageable links.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Web App</span>
+          </div>
+        </a>
+
+        <!-- Project 10 -->
+        <a href="https://github.com/adkdev200-ops/MinMed" target="_blank" class="project-card fade-in-up">
+          <div class="project-header">
+            <i class="fa-solid fa-users project-icon"></i>
+            <div class="project-links"><i class="fab fa-github"></i></div>
+          </div>
+          <h3 class="project-title">MinMed Social</h3>
+          <p class="project-desc">MinMed is a mini social media platform facilitating user interaction, built using the Django framework.</p>
+          <div class="project-tags">
+            <span class="tag">Django</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Python</span>
+          </div>
+        </a>
+
+      </div>
+    </main>
   </div>
 
-
-
 </body>
-
 </html>
