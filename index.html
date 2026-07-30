@@ -3,128 +3,109 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dev Adhikari | AI & ML Developer</title>
-  <meta name="description" content="Dev Adhikari — AI Agent Developer, ML Engineer, Full-Stack Builder. Portfolio showcasing cutting-edge AI projects.">
+  <title>Dev Adhikari | sys.admin</title>
+  <meta name="description" content="Dev Adhikari — AI Agent Developer, ML Engineer, Full-Stack Builder.">
   <link rel="icon" type="image/png" href="myprofilepic.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<base target="_blank">
 </head>
 <body>
 
   <!-- Custom Cursor -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-block" id="cursorBlock"></div>
 
-  <!-- Loader -->
-  <div class="loader-wrap" id="loader">
-    <div class="loader-ring"></div>
-    <div class="loader-text">Initializing</div>
-  </div>
-
-  <!-- Canvas Particles -->
-  <canvas id="particles"></canvas>
-
-  <!-- Aurora -->
-  <div class="aurora"><span></span><span></span><span></span><span></span></div>
-
-  <!-- 3D Floating Shapes -->
-  <div class="shapes-3d" id="shapes3d">
-    <div class="shape-3d shape-cube">
-      <div class="face"></div><div class="face"></div><div class="face"></div>
-      <div class="face"></div><div class="face"></div><div class="face"></div>
-    </div>
-    <div class="shape-3d shape-ring">
-      <div class="ring-el"></div><div class="ring-el"></div><div class="ring-el"></div>
-    </div>
-    <div class="shape-3d shape-pyramid"></div>
-  </div>
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrixCanvas"></canvas>
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
-    <div class="nav-logo">Dev.</div>
+    <div class="nav-logo">Dev</div>
     <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Journey</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#hero">/root</a></li>
+      <li><a href="#services">/services</a></li>
+      <li><a href="#skills">/skills</a></li>
+      <li><a href="#projects">/projects</a></li>
+      <li><a href="#experience">/logs</a></li>
+      <li><a href="#contact">/ping</a></li>
     </ul>
-    <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="nav-resume magnetic"><i class="fas fa-download"></i> <span>Resume</span></a>
+    <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="nav-resume glitch-hover"><i class="fas fa-terminal"></i> <span>GET resume.sh</span></a>
   </nav>
 
   <!-- ════════ HERO ════════ -->
   <section class="hero" id="hero">
-    <div class="status-badge"><span>✦</span> Open to Opportunities</div>
-    <div class="profile-ring magnetic-3d">
-      <img src="myprofilepic.png" alt="Dev Adhikari" onerror="this.src='https://ui-avatars.com/api/?name=Dev+Adhikari&background=6366f1&color=fff&size=170'">
-    </div>
-    <h1 class="hero-name parallax-layer" data-speed="0.02"><span>Dev Adhikari</span></h1>
-    <p class="subtitle parallax-layer" data-speed="0.015">I build <span class="typing-text" id="typing"></span></p>
-    <p class="bio parallax-layer" data-speed="0.01">Building intelligent systems at the intersection of AI, Machine Learning, and Web Development. I turn complex problems into elegant, production-ready solutions.</p>
-    <div class="hero-buttons parallax-layer" data-speed="0.008">
-      <a href="#projects" class="btn-primary magnetic"><span>Explore My Work</span><i class="fas fa-arrow-right"></i></a>
-      <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="btn-secondary magnetic"><i class="fas fa-file-arrow-down"></i> Download Resume</a>
-    </div>
-    <div class="social-row parallax-layer" data-speed="0.005">
-      <a href="https://github.com/adkdev200-ops" target="_blank" aria-label="GitHub" class="magnetic"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank" aria-label="LinkedIn" class="magnetic"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.instagram.com/adkdev200/" target="_blank" aria-label="Instagram" class="magnetic"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/adkdev200/" target="_blank" aria-label="Facebook" class="magnetic"><i class="fab fa-facebook-f"></i></a>
-      <a href="mailto:adkdev200@gmail.com" aria-label="Email" class="magnetic"><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="scroll-indicator"><div class="scroll-mouse"></div><span>Scroll</span></div>
-  </section>
+    
+    <div class="terminal-window reveal">
+      <div class="terminal-header">
+        <div class="terminal-btn t-red"></div>
+        <div class="terminal-btn t-yellow"></div>
+        <div class="terminal-btn t-green"></div>
+        <span class="terminal-title">bash - dev@portfolio:~</span>
+      </div>
+      <div class="terminal-body">
+        
+        <h1 class="hero-name"><span class="glitch-hover">Dev Adhikari</span></h1>
+        
+        <p class="subtitle"><span class="prompt">➜</span> <span style="color:var(--text);">Building: </span><span class="typing-text" id="typing"></span></p>
+        
+        <p class="bio"><span class="prompt">$</span> cat about.txt<br>
+        Engineering intelligent systems at the intersection of AI, Machine Learning, and Web Development. Turning complex problems into elegant, production-ready solutions.</p>
+        
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary glitch-hover">[ EXECUTE portfolio.sh ]</a>
+          <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="btn-secondary glitch-hover">wget resume.pdf</a>
+        </div>
+        
+        <div class="social-row">
+          <a href="https://github.com/adkdev200-ops" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/adkdev200/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:adkdev200@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
 
-  <!-- ════════ STATS ════════ -->
-  <div class="stats-strip reveal" id="statsStrip">
-    <div class="stat-item"><span class="stat-number" data-target="10">0</span><span class="stat-label">Projects</span></div>
-    <div class="stat-item"><span class="stat-number" data-target="7">0</span><span class="stat-label">AI / ML</span></div>
-    <div class="stat-item"><span class="stat-number" data-target="8">0</span><span class="stat-label">Technologies</span></div>
-    <div class="stat-item"><span class="stat-number" data-target="100">0</span><span class="stat-label">% Passion</span></div>
-  </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ════════ MARQUEE ════════ -->
   <div class="marquee-wrap">
     <div class="marquee">
-      <span>PyTorch</span><span>✦</span><span>LangGraph</span><span>✦</span><span>Transformers</span><span>✦</span>
-      <span>React</span><span>✦</span><span>Django</span><span>✦</span><span>FastAPI</span><span>✦</span>
-      <span>Python</span><span>✦</span><span>JavaScript</span><span>✦</span><span>RAG</span><span>✦</span>
-      <span>BERT</span><span>✦</span><span>Computer Vision</span><span>✦</span><span>NLP</span><span>✦</span>
-      <span>ChromaDB</span><span>✦</span><span>TensorFlow</span><span>✦</span><span>LangChain</span><span>✦</span>
-      <span>PyTorch</span><span>✦</span><span>LangGraph</span><span>✦</span><span>Transformers</span><span>✦</span>
-      <span>React</span><span>✦</span><span>Django</span><span>✦</span><span>FastAPI</span><span>✦</span>
-      <span>Python</span><span>✦</span><span>JavaScript</span><span>✦</span><span>RAG</span><span>✦</span>
-      <span>BERT</span><span>✦</span><span>Computer Vision</span><span>✦</span><span>NLP</span><span>✦</span>
-      <span>ChromaDB</span><span>✦</span><span>TensorFlow</span><span>✦</span><span>LangChain</span><span>✦</span>
+      <span>PyTorch</span><span>//</span><span>LangGraph</span><span>//</span><span>Transformers</span><span>//</span>
+      <span>React</span><span>//</span><span>Django</span><span>//</span><span>FastAPI</span><span>//</span>
+      <span>Python</span><span>//</span><span>JavaScript</span><span>//</span><span>RAG</span><span>//</span>
+      <span>BERT</span><span>//</span><span>Computer Vision</span><span>//</span><span>NLP</span><span>//</span>
+      <span>ChromaDB</span><span>//</span><span>TensorFlow</span><span>//</span><span>LangChain</span><span>//</span>
+      <span>PyTorch</span><span>//</span><span>LangGraph</span><span>//</span><span>Transformers</span><span>//</span>
+      <span>React</span><span>//</span><span>Django</span><span>//</span><span>FastAPI</span><span>//</span>
+      <span>Python</span><span>//</span><span>JavaScript</span><span>//</span><span>RAG</span><span>//</span>
+      <span>BERT</span><span>//</span><span>Computer Vision</span><span>//</span><span>NLP</span><span>//</span>
+      <span>ChromaDB</span><span>//</span><span>TensorFlow</span><span>//</span><span>LangChain</span><span>//</span>
     </div>
   </div>
 
   <!-- ════════ SERVICES ════════ -->
   <section class="section" id="services">
-    <p class="section-label reveal">// what_i_do</p>
-    <h2 class="section-title reveal">I Build <em data-text="Intelligent">Intelligent</em> Things</h2>
-    <p class="section-desc reveal">From autonomous AI agents to production-ready ML models and full-stack applications.</p>
+    <span class="section-label">init_services()</span>
+    <h2 class="section-title">Core <em>Modules</em></h2>
+    
     <div class="services-grid">
-      <div class="service-card reveal reveal-d1 spotlight-card">
-        <div class="service-icon"><i class="fas fa-robot"></i></div>
-        <h3>AI Agent Development</h3>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-robot"></i></div>
+        <h3>AI Agent Dev</h3>
         <p>Autonomous multi-agent systems using LangGraph with self-scheduling, memory persistence, and tool orchestration.</p>
       </div>
-      <div class="service-card reveal reveal-d2 spotlight-card">
-        <div class="service-icon"><i class="fas fa-brain"></i></div>
-        <h3>ML Model Engineering</h3>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+        <h3>ML Engineering</h3>
         <p>Custom Transformers, BERT fine-tuning, ViT models, and production ML pipelines from research to deployment.</p>
       </div>
-      <div class="service-card reveal reveal-d3 spotlight-card">
-        <div class="service-icon"><i class="fas fa-database"></i></div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-database"></i></div>
         <h3>RAG Systems</h3>
         <p>Retrieval-Augmented Generation pipelines with ChromaDB, semantic search, and domain-specific knowledge bases.</p>
       </div>
-      <div class="service-card reveal reveal-d4 spotlight-card">
-        <div class="service-icon"><i class="fas fa-globe"></i></div>
-        <h3>Full-Stack Development</h3>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-server"></i></div>
+        <h3>Full-Stack Dev</h3>
         <p>End-to-end web applications with Django, FastAPI, React, modern UI/UX, and scalable backend architectures.</p>
       </div>
     </div>
@@ -132,79 +113,138 @@
 
   <!-- ════════ SKILLS ════════ -->
   <section class="section" id="skills">
-    <p class="section-label reveal">// tech_stack</p>
-    <h2 class="section-title reveal">Skills & <em data-text="Expertise">Expertise</em></h2>
-    <p class="section-desc reveal">Deep expertise across the AI/ML and full-stack spectrum.</p>
+    <span class="section-label">load_dependencies()</span>
+    <h2 class="section-title">Tech <em>Stack</em></h2>
+    
     <div class="skills-grid">
-      <div class="skill-card reveal reveal-d1 spotlight-card">
-        <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-        <div class="skill-bar-label"><span>PyTorch / TensorFlow</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-        <div class="skill-bar-label"><span>Transformers / NLP</span><span>88%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
-        <div class="skill-bar-label"><span>Computer Vision</span><span>80%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+      <div class="card reveal">
+        <h3>Machine Learning</h3>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>PyTorch / TensorFlow</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Transformers / NLP</span><span>88%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Computer Vision</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
       </div>
-      <div class="skill-card reveal reveal-d2 spotlight-card">
-        <h3><i class="fas fa-robot"></i> AI Agents</h3>
-        <div class="skill-bar-label"><span>LangGraph / LangChain</span><span>92%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
-        <div class="skill-bar-label"><span>RAG Systems</span><span>85%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-        <div class="skill-bar-label"><span>Prompt Engineering</span><span>88%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+      <div class="card reveal">
+        <h3>AI Agents & RAG</h3>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>LangGraph / LangChain</span><span>92%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>RAG / ChromaDB</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Prompt Engineering</span><span>88%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+        </div>
       </div>
-      <div class="skill-card reveal reveal-d3 spotlight-card">
-        <h3><i class="fas fa-code"></i> Full-Stack</h3>
-        <div class="skill-bar-label"><span>Python / Django / FastAPI</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
-        <div class="skill-bar-label"><span>React / JavaScript</span><span>78%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
-        <div class="skill-bar-label"><span>HTML / CSS / Design</span><span>85%</span></div>
-        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+      <div class="card reveal">
+        <h3>Full-Stack Web</h3>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Python / Django / FastAPI</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>React / JS / TS</span><span>78%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>HTML / CSS</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ════════ PROJECTS ════════ -->
   <section class="section" id="projects">
-    <p class="section-label reveal">// portfolio</p>
-    <h2 class="section-title reveal">Featured <em data-text="Projects">Projects</em></h2>
-    <p class="section-desc reveal">A curated collection of my most impactful builds.</p>
-    <div class="projects-grid" id="projectsGrid">
-      <a href="https://github.com/adkdev200-ops/research_workflow" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">AI Research Workflow</h3><p class="project-desc">Multi-step LangGraph research workflow producing citation-heavy research reports from any topic autonomously.</p><div class="project-tags"><span class="tag">LangGraph</span><span class="tag">AI Agents</span><span class="tag">Python</span></div></a>
-      <a href="https://github.com/adkdev200-ops/CCPA-Compliance-RAG-System" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">CCPA Compliance RAG</h3><p class="project-desc">Lightweight RAG system analyzing CCPA violations using Qwen2.5-1.5B, ChromaDB, and FastAPI.</p><div class="project-tags"><span class="tag">RAG</span><span class="tag">LLM</span><span class="tag">FastAPI</span></div></a>
-      <a href="https://github.com/adkdev200-ops/English-to-Hindi--Transformer-from-scratch-" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-language"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">Transformer From Scratch</h3><p class="project-desc">Full implementation of "Attention is All You Need" — built and trained for English→Hindi translation.</p><div class="project-tags"><span class="tag">PyTorch</span><span class="tag">NLP</span><span class="tag">Deep Learning</span></div></a>
-      <a href="https://github.com/adkdev200-ops/Analysing-Stocks-using-Transformer" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-chart-line"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">Stock Prediction Transformer</h3><p class="project-desc">Transformer model predicting stock movements from historical data across 100 US companies.</p><div class="project-tags"><span class="tag">ML</span><span class="tag">Transformer</span><span class="tag">Finance</span></div></a>
-      <a href="https://github.com/adkdev200-ops/Real-time-emotion-detector" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-face-smile"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">Real-Time Emotion Detector</h3><p class="project-desc">Fine-tuned Vision Transformer (ViT) for real-time emotion detection from camera feed.</p><div class="project-tags"><span class="tag">ViT</span><span class="tag">CV</span><span class="tag">PyTorch</span></div></a>
-      <a href="https://github.com/adkdev200-ops/BERT-fine-tuned-for-Sentiment-Analysis" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-comments"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">BERT Sentiment Analysis</h3><p class="project-desc">Fine-tuned BERT on a massive Twitter dataset for production-grade sentiment classification.</p><div class="project-tags"><span class="tag">BERT</span><span class="tag">NLP</span><span class="tag">PyTorch</span></div></a>
-      <a href="https://github.com/adkdev200-ops/Yt_Chat" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-brands fa-youtube"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">YouTube Chat AI</h3><p class="project-desc">Chat with any YouTube video — paste a URL and ask questions about the content using AI.</p><div class="project-tags"><span class="tag">AI</span><span class="tag">Python</span><span class="tag">Web</span></div></a>
-      <a href="https://github.com/adkdev200-ops/ecommerce-project" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">E-Commerce Platform</h3><p class="project-desc">Full-stack e-commerce with product management, cart, auth, and payment integration.</p><div class="project-tags"><span class="tag">React</span><span class="tag">Django</span><span class="tag">JS</span></div></a>
-      <a href="https://github.com/adkdev200-ops/Url_shortener" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-link"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">URL Shortener</h3><p class="project-desc">Fast, reliable URL shortener with analytics and custom slug support.</p><div class="project-tags"><span class="tag">JavaScript</span><span class="tag">Web</span></div></a>
-      <a href="https://github.com/adkdev200-ops/MinMed" target="_blank" class="project-card reveal spotlight-card"><div class="project-header"><div class="project-icon"><i class="fa-solid fa-users"></i></div><i class="fas fa-arrow-up-right-from-square project-link-icon"></i></div><h3 class="project-title">MinMed Social</h3><p class="project-desc">Mini social platform with posts, profiles, and interactions — built with Django.</p><div class="project-tags"><span class="tag">Django</span><span class="tag">Python</span></div></a>
+    <span class="section-label">ls ./projects</span>
+    <h2 class="section-title">Deployed <em>Scripts</em></h2>
+    
+    <div class="projects-grid">
+      <a href="https://github.com/adkdev200-ops/research_workflow" target="_blank" class="card project-card reveal">
+        <div class="project-header">
+          <i class="fa-solid fa-diagram-project card-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+        </div>
+        <h3>AI Research Workflow</h3>
+        <p>Multi-step LangGraph research workflow producing citation-heavy research reports from any topic autonomously.</p>
+        <div class="project-tags"><span class="tag">LangGraph</span><span class="tag">Python</span></div>
+      </a>
+      <a href="https://github.com/adkdev200-ops/CCPA-Compliance-RAG-System" target="_blank" class="card project-card reveal">
+        <div class="project-header">
+          <i class="fa-solid fa-shield-halved card-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+        </div>
+        <h3>CCPA Compliance RAG</h3>
+        <p>Lightweight RAG system analyzing CCPA violations using Qwen2.5-1.5B, ChromaDB, and FastAPI.</p>
+        <div class="project-tags"><span class="tag">RAG</span><span class="tag">FastAPI</span></div>
+      </a>
+      <a href="https://github.com/adkdev200-ops/English-to-Hindi--Transformer-from-scratch-" target="_blank" class="card project-card reveal">
+        <div class="project-header">
+          <i class="fa-solid fa-language card-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+        </div>
+        <h3>Transformer From Scratch</h3>
+        <p>Full implementation of "Attention is All You Need" — built and trained for English to Hindi translation.</p>
+        <div class="project-tags"><span class="tag">PyTorch</span><span class="tag">NLP</span></div>
+      </a>
+      <a href="https://github.com/adkdev200-ops/Analysing-Stocks-using-Transformer" target="_blank" class="card project-card reveal">
+        <div class="project-header">
+          <i class="fa-solid fa-chart-line card-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+        </div>
+        <h3>Stock Predictor</h3>
+        <p>Transformer model predicting stock movements from historical data across 100 US companies.</p>
+        <div class="project-tags"><span class="tag">ML</span><span class="tag">Finance</span></div>
+      </a>
+      <a href="https://github.com/adkdev200-ops/Real-time-emotion-detector" target="_blank" class="card project-card reveal">
+        <div class="project-header">
+          <i class="fa-solid fa-face-smile card-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+        </div>
+        <h3>Emotion Detector</h3>
+        <p>Fine-tuned Vision Transformer (ViT) for real-time emotion detection from camera feed.</p>
+        <div class="project-tags"><span class="tag">ViT</span><span class="tag">PyTorch</span></div>
+      </a>
+      <a href="https://github.com/adkdev200-ops/BERT-fine-tuned-for-Sentiment-Analysis" target="_blank" class="card project-card reveal">
+        <div class="project-header">
+          <i class="fa-solid fa-comments card-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+        </div>
+        <h3>BERT Sentiment</h3>
+        <p>Fine-tuned BERT on a massive Twitter dataset for production-grade sentiment classification.</p>
+        <div class="project-tags"><span class="tag">BERT</span><span class="tag">NLP</span></div>
+      </a>
     </div>
   </section>
 
   <!-- ════════ EXPERIENCE ════════ -->
   <section class="section" id="experience">
-    <p class="section-label reveal">// journey</p>
-    <h2 class="section-title reveal">Experience & <em data-text="Growth">Growth</em></h2>
-    <p class="section-desc reveal">Key milestones that shaped my development path.</p>
+    <span class="section-label">tail -f /var/log/syslog</span>
+    <h2 class="section-title">System <em>Logs</em></h2>
+    
     <div class="timeline">
       <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
         <div class="timeline-date">2026 — PRESENT</div>
         <div class="timeline-title">AI Agent Developer</div>
         <div class="timeline-desc">Building autonomous AI agents with LangGraph — newsletter automation with self-scheduling, research workflows, and internet monitoring systems (Vanguard).</div>
       </div>
       <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
         <div class="timeline-date">2025 — 2026</div>
         <div class="timeline-title">ML & Deep Learning Engineer</div>
         <div class="timeline-desc">Built Transformers from scratch, fine-tuned BERT & ViT, created stock prediction models using deep learning on real financial data.</div>
       </div>
       <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
         <div class="timeline-date">2024 — 2025</div>
         <div class="timeline-title">Full-Stack Developer</div>
         <div class="timeline-desc">Developed production web apps with Django, React, and FastAPI — e-commerce platforms, URL shorteners, and social tools.</div>
@@ -212,329 +252,146 @@
     </div>
   </section>
 
-  <!-- ════════ CTA BANNER ════════ -->
-  <div class="cta-banner reveal" style="position:relative;z-index:1">
-    <h2>Ready to Build Something <em style="font-style:normal;background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Amazing</em>?</h2>
-    <p>I'm currently open to freelance projects, collaborations, and full-time opportunities.</p>
-    <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="btn-primary magnetic" style="font-size:17px;padding:16px 40px">
-      <span><i class="fas fa-file-arrow-down"></i> Download My Resume</span>
-    </a>
-  </div>
-
   <!-- ════════ CONTACT ════════ -->
-  <section class="section" id="contact">
-    <p class="section-label reveal">// get_in_touch</p>
-    <h2 class="section-title reveal">Let's <em data-text="Connect">Connect</em></h2>
-    <p class="section-desc reveal">Have a project, question, or just want to say hi? Reach out.</p>
-    <div class="contact-grid">
-      <a href="mailto:adkdev200@gmail.com" class="contact-card reveal reveal-d1 spotlight-card magnetic">
-        <i class="fas fa-envelope"></i><h4>Email</h4><p>adkdev200@gmail.com</p>
-      </a>
-      <a href="https://github.com/adkdev200-ops" target="_blank" class="contact-card reveal reveal-d2 spotlight-card magnetic">
-        <i class="fab fa-github"></i><h4>GitHub</h4><p>@adkdev200-ops</p>
-      </a>
-      <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank" class="contact-card reveal reveal-d3 spotlight-card magnetic">
-        <i class="fab fa-linkedin-in"></i><h4>LinkedIn</h4><p>Dev Adhikari</p>
-      </a>
-      <a href="https://www.instagram.com/adkdev200/" target="_blank" class="contact-card reveal reveal-d4 spotlight-card magnetic">
-        <i class="fab fa-instagram"></i><h4>Instagram</h4><p>@adkdev200</p>
-      </a>
-    </div>
+  <section class="section" id="contact" style="text-align: center; max-width: 800px; padding-bottom: 120px;">
+    <span class="section-label">ping server</span>
+    <h2 class="section-title">Open Connection</h2>
+    <p style="color:var(--muted); margin-bottom: 40px; font-family:'Inter', sans-serif;">System standing by for incoming packets. I'm available for freelance projects, open-source collaborations, or full-time roles.</p>
+    <a href="mailto:adkdev200@gmail.com" class="btn-primary glitch-hover">[ SEND PACKET ]</a>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-links">
-      <a href="https://github.com/adkdev200-ops" target="_blank" class="magnetic"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank" class="magnetic"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.instagram.com/adkdev200/" target="_blank" class="magnetic"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:adkdev200@gmail.com" class="magnetic"><i class="fas fa-envelope"></i></a>
-    </div>
-    <p>Designed & Crafted by Dev Adhikari <span class="heart">♥</span> 2026</p>
+    <p>SysAdmin: Dev Adhikari <span class="heart">♥</span> 2026</p>
   </footer>
 
 <script>
 // ═══════════════════════════════════════
-//  CORE ENGINE — Custom Cursor
+//  CUSTOM CURSOR
 // ═══════════════════════════════════════
-const cursorDot = document.getElementById('cursorDot');
-const cursorRing = document.getElementById('cursorRing');
-let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
+const cursorBlock = document.getElementById('cursorBlock');
 const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
 
 if (!isTouchDevice) {
   document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorDot.style.left = mouseX + 'px';
-    cursorDot.style.top = mouseY + 'px';
+    cursorBlock.style.left = e.clientX + 'px';
+    cursorBlock.style.top = e.clientY + 'px';
   });
-
-  function animateCursor() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    cursorRing.style.left = ringX + 'px';
-    cursorRing.style.top = ringY + 'px';
-    requestAnimationFrame(animateCursor);
-  }
-  animateCursor();
-
-  // Hover states
-  document.querySelectorAll('a, button, .magnetic').forEach(el => {
-    el.addEventListener('mouseenter', () => cursorRing.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursorRing.classList.remove('hover'));
-    el.addEventListener('mousedown', () => cursorRing.classList.add('click'));
-    el.addEventListener('mouseup', () => cursorRing.classList.remove('click'));
+  
+  document.querySelectorAll('a, button, .glitch-hover').forEach(el => {
+    el.addEventListener('mouseenter', () => cursorBlock.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursorBlock.classList.remove('hover'));
   });
 } else {
-  cursorDot.style.display = 'none';
-  cursorRing.style.display = 'none';
+  cursorBlock.style.display = 'none';
 }
 
 // ═══════════════════════════════════════
-//  LOADER
+//  MATRIX RAIN
 // ═══════════════════════════════════════
-window.addEventListener('load', () => {
-  const loaderText = document.querySelector('.loader-text');
-  const texts = ['Initializing', 'Loading Assets', 'Compiling Shaders', 'Ready'];
-  let li = 0;
-  const interval = setInterval(() => {
-    li++;
-    if (loaderText && li < texts.length) loaderText.textContent = texts[li];
-    if (li >= texts.length) {
-      clearInterval(interval);
-      setTimeout(() => document.getElementById('loader').classList.add('done'), 400);
-    }
-  }, 300);
-});
+const canvas = document.getElementById('matrixCanvas');
+const ctx = canvas.getContext('2d');
 
-// ═══════════════════════════════════════
-//  PARTICLES — 3D Depth System
-// ═══════════════════════════════════════
-const C = document.getElementById('particles'), X = C.getContext('2d');
-let W, H, P = [];
-function resize() { W = C.width = innerWidth; H = C.height = innerHeight; }
-resize();
-addEventListener('resize', resize);
+let width, height;
+let cols;
+let yPos = [];
 
-for (let i = 0; i < 100; i++) {
-  P.push({
-    x: Math.random() * W,
-    y: Math.random() * H,
-    z: Math.random() * 2 + 0.5,
-    r: Math.random() * 1.5 + 0.4,
-    dx: (Math.random() - .5) * .25,
-    dy: (Math.random() - .5) * .25,
-    o: Math.random() * .25 + .04
+function initMatrix() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+  cols = Math.floor(width / 20) + 1;
+  yPos = Array(cols).fill(0).map(() => Math.random() * height);
+}
+initMatrix();
+window.addEventListener('resize', initMatrix);
+
+function drawMatrix() {
+  ctx.fillStyle = 'rgba(5, 5, 5, 0.1)';
+  ctx.fillRect(0, 0, width, height);
+
+  ctx.fillStyle = '#00ff41';
+  ctx.font = '14px Fira Code, monospace';
+
+  yPos.forEach((y, ind) => {
+    const text = String.fromCharCode(Math.random() * 128);
+    const x = ind * 20;
+    
+    // Randomly change color to white for "glitch/head" effect
+    if(Math.random() > 0.95) ctx.fillStyle = '#fff';
+    else ctx.fillStyle = '#00ff41';
+
+    ctx.fillText(text, x, y);
+    if (y > 100 + Math.random() * 10000) yPos[ind] = 0;
+    else yPos[ind] = y + 20;
   });
 }
-
-let pmX = W / 2, pmY = H / 2;
-document.addEventListener('mousemove', e => { pmX = e.clientX; pmY = e.clientY; });
-
-(function drawParticles() {
-  X.clearRect(0, 0, W, H);
-  P.forEach(p => {
-    const ddx = p.x - pmX, ddy = p.y - pmY, dist = Math.sqrt(ddx * ddx + ddy * ddy);
-    if (dist < 180) {
-      const f = .25 * (1 - dist / 180) * p.z;
-      p.x += ddx / dist * f;
-      p.y += ddy / dist * f;
-    }
-    p.x += p.dx * p.z;
-    p.y += p.dy * p.z;
-    if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
-    if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
-    const sz = p.r * p.z;
-    X.beginPath();
-    X.arc(p.x, p.y, sz, 0, Math.PI * 2);
-    X.fillStyle = `rgba(167,139,250,${p.o * p.z})`;
-    X.fill();
-  });
-  for (let i = 0; i < P.length; i++) {
-    for (let j = i + 1; j < P.length; j++) {
-      const dx = P[i].x - P[j].x, dy = P[i].y - P[j].y, d = Math.sqrt(dx * dx + dy * dy);
-      if (d < 130) {
-        X.beginPath();
-        X.moveTo(P[i].x, P[i].y);
-        X.lineTo(P[j].x, P[j].y);
-        X.strokeStyle = `rgba(139,92,246,${.04 * (1 - d / 130) * Math.min(P[i].z, P[j].z)})`;
-        X.lineWidth = .4 * Math.min(P[i].z, P[j].z);
-        X.stroke();
-      }
-    }
-  }
-  requestAnimationFrame(drawParticles);
-})();
+setInterval(drawMatrix, 50);
 
 // ═══════════════════════════════════════
-//  TEXT SCRAMBLE TYPING EFFECT
+//  TYPING EFFECT (Command Line Style)
 // ═══════════════════════════════════════
-class TextScramble {
-  constructor(el) {
-    this.el = el;
-    this.chars = '!<>-_\/[]{}—=+*^?#________';
-    this.update = this.update.bind(this);
-  }
-  setText(newText) {
-    const oldText = this.el.innerText;
-    const length = Math.max(oldText.length, newText.length);
-    const promise = new Promise(resolve => this.resolve = resolve);
-    this.queue = [];
-    for (let i = 0; i < length; i++) {
-      const from = oldText[i] || '';
-      const to = newText[i] || '';
-      const start = Math.floor(Math.random() * 20);
-      const end = start + Math.floor(Math.random() * 20);
-      this.queue.push({ from, to, start, end });
-    }
-    cancelAnimationFrame(this.frameRequest);
-    this.frame = 0;
-    this.update();
-    return promise;
-  }
-  update() {
-    let output = '';
-    let complete = 0;
-    for (let i = 0, n = this.queue.length; i < n; i++) {
-      let { from, to, start, end, char } = this.queue[i];
-      if (this.frame >= end) { complete++; output += to; }
-      else if (this.frame >= start) {
-        if (!char || Math.random() < .28) {
-          char = this.randomChar();
-          this.queue[i].char = char;
-        }
-        output += `<span style="color:var(--accent2)">${char}</span>`;
-      } else { output += from; }
-    }
-    this.el.innerHTML = output;
-    if (complete === this.queue.length) this.resolve();
-    else { this.frameRequest = requestAnimationFrame(this.update); this.frame++; }
-  }
-  randomChar() { return this.chars[Math.floor(Math.random() * this.chars.length)]; }
-}
-
-const words = ['AI Agents', 'ML Models', 'Web Apps', 'Transformers', 'RAG Systems', 'the Future'];
+const words = ['AI_Agents.py', 'Transformers.ckpt', 'RAG_Systems.sh', 'Web_Apps.js'];
 const el = document.getElementById('typing');
-const fx = new TextScramble(el);
-let wi = 0;
-const nextWord = () => {
-  fx.setText(words[wi]).then(() => {
-    setTimeout(nextWord, 2200);
-  });
-  wi = (wi + 1) % words.length;
-};
-setTimeout(nextWord, 1200);
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+  
+  if(isDeleting) {
+    el.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    el.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
+  }
+
+  let typeSpeed = isDeleting ? 30 : 100;
+
+  if(!isDeleting && charIndex === currentWord.length) {
+    typeSpeed = 2000; // Pause at end
+    isDeleting = true;
+  } else if(isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    typeSpeed = 500; // Pause before new word
+  }
+  
+  // Random glitch speed variation
+  if(!isDeleting && Math.random() > 0.8) {
+    typeSpeed = 20;
+  }
+
+  setTimeout(typeEffect, typeSpeed);
+}
+setTimeout(typeEffect, 1000);
 
 // ═══════════════════════════════════════
-//  NAV SCROLL
+//  SCROLL REVEALS & NAV SCROLL
 // ═══════════════════════════════════════
-addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', scrollY > 60));
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
 
-// ═══════════════════════════════════════
-//  SCROLL REVEAL + PARALLAX
-// ═══════════════════════════════════════
 const rObs = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) { e.target.classList.add('visible'); rObs.unobserve(e.target); }
-}), { threshold: .08 });
+  if (e.isIntersecting) { 
+    e.target.classList.add('visible'); 
+    
+    // Trigger skill bars if they exist inside this reveal
+    const bars = e.target.querySelectorAll('.skill-bar-fill');
+    if(bars.length) {
+      setTimeout(() => {
+        bars.forEach(b => b.style.width = b.dataset.width + '%');
+      }, 300);
+    }
+    
+    rObs.unobserve(e.target); 
+  }
+}), { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => rObs.observe(el));
-
-// Parallax layers
-const parallaxLayers = document.querySelectorAll('.parallax-layer');
-addEventListener('scroll', () => {
-  const sy = window.scrollY;
-  parallaxLayers.forEach(layer => {
-    const speed = parseFloat(layer.dataset.speed) || 0.02;
-    layer.style.transform = `translateY(${sy * speed}px)`;
-  });
-  // 3D shapes parallax
-  const shapes = document.getElementById('shapes3d');
-  if (shapes) shapes.style.transform = `translateY(${sy * 0.03}px) rotateY(${sy * 0.02}deg)`;
-});
-
-// ═══════════════════════════════════════
-//  SPOTLIGHT CARDS — Mouse tracking glow
-// ═══════════════════════════════════════
-document.querySelectorAll('.spotlight-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-    card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  });
-});
-
-// ═══════════════════════════════════════
-//  3D CARD TILT — Projects
-// ═══════════════════════════════════════
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - .5;
-    const y = (e.clientY - r.top) / r.height - .5;
-    card.style.transform = `perspective(1000px) rotateX(${-y * 12}deg) rotateY(${x * 12}deg) translateZ(20px)`;
-    card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-    card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-  });
-});
-
-// ═══════════════════════════════════════
-//  MAGNETIC BUTTONS
-// ═══════════════════════════════════════
-document.querySelectorAll('.magnetic').forEach(btn => {
-  btn.addEventListener('mousemove', e => {
-    const r = btn.getBoundingClientRect();
-    const x = e.clientX - r.left - r.width / 2;
-    const y = e.clientY - r.top - r.height / 2;
-    btn.style.transform = `translate(${x * .25}px, ${y * .25}px)`;
-  });
-  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-});
-
-// Magnetic 3D (profile ring)
-document.querySelectorAll('.magnetic-3d').forEach(el => {
-  el.addEventListener('mousemove', e => {
-    const r = el.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - .5;
-    const y = (e.clientY - r.top) / r.height - .5;
-    el.style.transform = `rotateY(${x * 25}deg) rotateX(${-y * 25}deg) scale(1.05)`;
-  });
-  el.addEventListener('mouseleave', () => { el.style.transform = ''; });
-});
-
-// ═══════════════════════════════════════
-//  SKILL BARS
-// ═══════════════════════════════════════
-const sObs = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) {
-    e.target.querySelectorAll('.skill-bar-fill').forEach(b => b.style.width = b.dataset.width + '%');
-    sObs.unobserve(e.target);
-  }
-}), { threshold: .3 });
-document.querySelectorAll('.skill-card').forEach(c => sObs.observe(c));
-
-// ═══════════════════════════════════════
-//  COUNTER ANIMATION
-// ═══════════════════════════════════════
-const cObs = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) {
-    e.target.querySelectorAll('.stat-number').forEach(n => {
-      const t = +n.dataset.target;
-      let c = 0;
-      const s = t / 50;
-      const timer = setInterval(() => {
-        c += s;
-        if (c >= t) { n.textContent = t + '+'; clearInterval(timer); }
-        else n.textContent = Math.floor(c) + '+';
-      }, 30);
-    });
-    cObs.unobserve(e.target);
-  }
-}), { threshold: .5 });
-document.querySelectorAll('.stats-strip').forEach(s => cObs.observe(s));
 
 // ═══════════════════════════════════════
 //  SMOOTH ANCHOR SCROLL
@@ -546,18 +403,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-
-// ═══════════════════════════════════════
-//  3D SHAPES MOUSE PARALLAX
-// ═══════════════════════════════════════
-const shapes3d = document.getElementById('shapes3d');
-if (shapes3d && !isTouchDevice) {
-  document.addEventListener('mousemove', e => {
-    const x = (e.clientX / window.innerWidth - .5) * 20;
-    const y = (e.clientY / window.innerHeight - .5) * 20;
-    shapes3d.style.transform = `translateY(${window.scrollY * 0.03}px) rotateY(${x}deg) rotateX(${-y}deg)`;
-  });
-}
 </script>
 </body>
 </html>
