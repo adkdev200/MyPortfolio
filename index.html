@@ -3,56 +3,51 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dev Adhikari | sys.admin</title>
+  <title>Dev Adhikari | AI & Full-Stack Developer</title>
   <meta name="description" content="Dev Adhikari — AI Agent Developer, ML Engineer, Full-Stack Builder.">
   <link rel="icon" type="image/png" href="myprofilepic.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Custom Cursor -->
-  <div class="cursor-block" id="cursorBlock"></div>
-
-  <!-- Matrix Rain Canvas -->
-  <canvas id="matrixCanvas"></canvas>
+  <!-- Background Gradients -->
+  <div class="bg-gradient bg-grad-1"></div>
+  <div class="bg-gradient bg-grad-2"></div>
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
-    <div class="nav-logo">Dev</div>
-    <ul class="nav-links">
-      <li><a href="#hero">/root</a></li>
-      <li><a href="#services">/services</a></li>
-      <li><a href="#skills">/skills</a></li>
-      <li><a href="#projects">/projects</a></li>
-      <li><a href="#experience">/logs</a></li>
-      <li><a href="#contact">/ping</a></li>
-    </ul>
-    <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="nav-resume glitch-hover"><i class="fas fa-terminal"></i> <span>GET resume.sh</span></a>
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#hero">Dev.</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+      </ul>
+      <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="btn-outline nav-btn">Download Resume</a>
+    </div>
   </nav>
 
   <!-- ════════ HERO ════════ -->
-  <section class="hero" id="hero">
-    
-    <div class="terminal-window reveal">
-      <div class="terminal-header">
-        <div class="terminal-btn t-red"></div>
-        <div class="terminal-btn t-yellow"></div>
-        <div class="terminal-btn t-green"></div>
-        <span class="terminal-title">bash - dev@portfolio:~</span>
-      </div>
-      <div class="terminal-body">
-        
-        <h1 class="hero-name"><span class="glitch-hover">Dev Adhikari</span></h1>
-        
-        <p class="subtitle"><span class="prompt">➜</span> <span style="color:var(--text);">Building: </span><span class="typing-text" id="typing"></span></p>
-        
-        <p class="bio"><span class="prompt">$</span> cat about.txt<br>
-        Engineering intelligent systems at the intersection of AI, Machine Learning, and Web Development. Turning complex problems into elegant, production-ready solutions.</p>
+  <section class="hero section" id="hero">
+    <div class="hero-content">
+      <div class="hero-text reveal">
+        <span class="badge">Available for Work</span>
+        <h1 class="hero-name">Hi, I'm Dev Adhikari</h1>
+        <h2 class="hero-role">AI Engineer & Full-Stack Developer</h2>
+        <p class="bio">
+          I build intelligent systems at the intersection of Artificial Intelligence, Machine Learning, and Modern Web Development. Turning complex problems into elegant, production-ready solutions.
+        </p>
         
         <div class="hero-buttons">
-          <a href="#projects" class="btn-primary glitch-hover">[ EXECUTE portfolio.sh ]</a>
-          <a href="DevAdhikari_AI_Agent_Developer.pdf" download class="btn-secondary glitch-hover">wget resume.pdf</a>
+          <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn-secondary">Let's Connect</a>
         </div>
         
         <div class="social-row">
@@ -61,7 +56,12 @@
           <a href="https://www.instagram.com/adkdev200/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="mailto:adkdev200@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
-
+      </div>
+      <div class="hero-image reveal">
+        <div class="image-wrapper">
+          <img src="myprofilepic.png" alt="Dev Adhikari Profile Picture">
+          <div class="glow-effect"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -69,23 +69,26 @@
   <!-- ════════ MARQUEE ════════ -->
   <div class="marquee-wrap">
     <div class="marquee">
-      <span>PyTorch</span><span>//</span><span>LangGraph</span><span>//</span><span>Transformers</span><span>//</span>
-      <span>React</span><span>//</span><span>Django</span><span>//</span><span>FastAPI</span><span>//</span>
-      <span>Python</span><span>//</span><span>JavaScript</span><span>//</span><span>RAG</span><span>//</span>
-      <span>BERT</span><span>//</span><span>Computer Vision</span><span>//</span><span>NLP</span><span>//</span>
-      <span>ChromaDB</span><span>//</span><span>TensorFlow</span><span>//</span><span>LangChain</span><span>//</span>
-      <span>PyTorch</span><span>//</span><span>LangGraph</span><span>//</span><span>Transformers</span><span>//</span>
-      <span>React</span><span>//</span><span>Django</span><span>//</span><span>FastAPI</span><span>//</span>
-      <span>Python</span><span>//</span><span>JavaScript</span><span>//</span><span>RAG</span><span>//</span>
-      <span>BERT</span><span>//</span><span>Computer Vision</span><span>//</span><span>NLP</span><span>//</span>
-      <span>ChromaDB</span><span>//</span><span>TensorFlow</span><span>//</span><span>LangChain</span><span>//</span>
+      <span>PyTorch</span><span>&bull;</span><span>LangGraph</span><span>&bull;</span><span>Transformers</span><span>&bull;</span>
+      <span>React</span><span>&bull;</span><span>Django</span><span>&bull;</span><span>FastAPI</span><span>&bull;</span>
+      <span>Python</span><span>&bull;</span><span>JavaScript</span><span>&bull;</span><span>RAG</span><span>&bull;</span>
+      <span>BERT</span><span>&bull;</span><span>Computer Vision</span><span>&bull;</span><span>NLP</span><span>&bull;</span>
+      <span>ChromaDB</span><span>&bull;</span><span>TensorFlow</span><span>&bull;</span><span>LangChain</span><span>&bull;</span>
+      <!-- Duplicate for loop -->
+      <span>PyTorch</span><span>&bull;</span><span>LangGraph</span><span>&bull;</span><span>Transformers</span><span>&bull;</span>
+      <span>React</span><span>&bull;</span><span>Django</span><span>&bull;</span><span>FastAPI</span><span>&bull;</span>
+      <span>Python</span><span>&bull;</span><span>JavaScript</span><span>&bull;</span><span>RAG</span><span>&bull;</span>
+      <span>BERT</span><span>&bull;</span><span>Computer Vision</span><span>&bull;</span><span>NLP</span><span>&bull;</span>
+      <span>ChromaDB</span><span>&bull;</span><span>TensorFlow</span><span>&bull;</span><span>LangChain</span><span>&bull;</span>
     </div>
   </div>
 
   <!-- ════════ SERVICES ════════ -->
   <section class="section" id="services">
-    <span class="section-label">init_services()</span>
-    <h2 class="section-title">Core <em>Modules</em></h2>
+    <div class="section-header reveal">
+      <h2 class="section-title">Core Services</h2>
+      <p class="section-subtitle">Delivering high-performance, scalable solutions across the stack.</p>
+    </div>
     
     <div class="services-grid">
       <div class="card reveal">
@@ -105,16 +108,18 @@
       </div>
       <div class="card reveal">
         <div class="card-icon"><i class="fas fa-server"></i></div>
-        <h3>Full-Stack Dev</h3>
+        <h3>Full-Stack Web</h3>
         <p>End-to-end web applications with Django, FastAPI, React, modern UI/UX, and scalable backend architectures.</p>
       </div>
     </div>
   </section>
 
   <!-- ════════ SKILLS ════════ -->
-  <section class="section" id="skills">
-    <span class="section-label">load_dependencies()</span>
-    <h2 class="section-title">Tech <em>Stack</em></h2>
+  <section class="section bg-alternate" id="skills">
+    <div class="section-header reveal">
+      <h2 class="section-title">Technical Expertise</h2>
+      <p class="section-subtitle">The tools and technologies I use to bring ideas to life.</p>
+    </div>
     
     <div class="skills-grid">
       <div class="card reveal">
@@ -167,59 +172,66 @@
 
   <!-- ════════ PROJECTS ════════ -->
   <section class="section" id="projects">
-    <span class="section-label">ls ./projects</span>
-    <h2 class="section-title">Deployed <em>Scripts</em></h2>
+    <div class="section-header reveal">
+      <h2 class="section-title">Selected Works</h2>
+      <p class="section-subtitle">A showcase of some of my most impactful projects.</p>
+    </div>
     
     <div class="projects-grid">
       <a href="https://github.com/adkdev200-ops/research_workflow" target="_blank" class="card project-card reveal">
         <div class="project-header">
-          <i class="fa-solid fa-diagram-project card-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+          <div class="icon-wrap"><i class="fa-solid fa-diagram-project"></i></div>
+          <i class="fas fa-arrow-up-right-from-square link-icon"></i>
         </div>
         <h3>AI Research Workflow</h3>
         <p>Multi-step LangGraph research workflow producing citation-heavy research reports from any topic autonomously.</p>
         <div class="project-tags"><span class="tag">LangGraph</span><span class="tag">Python</span></div>
       </a>
+      
       <a href="https://github.com/adkdev200-ops/CCPA-Compliance-RAG-System" target="_blank" class="card project-card reveal">
         <div class="project-header">
-          <i class="fa-solid fa-shield-halved card-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+          <div class="icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+          <i class="fas fa-arrow-up-right-from-square link-icon"></i>
         </div>
         <h3>CCPA Compliance RAG</h3>
         <p>Lightweight RAG system analyzing CCPA violations using Qwen2.5-1.5B, ChromaDB, and FastAPI.</p>
         <div class="project-tags"><span class="tag">RAG</span><span class="tag">FastAPI</span></div>
       </a>
+      
       <a href="https://github.com/adkdev200-ops/English-to-Hindi--Transformer-from-scratch-" target="_blank" class="card project-card reveal">
         <div class="project-header">
-          <i class="fa-solid fa-language card-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+          <div class="icon-wrap"><i class="fa-solid fa-language"></i></div>
+          <i class="fas fa-arrow-up-right-from-square link-icon"></i>
         </div>
         <h3>Transformer From Scratch</h3>
         <p>Full implementation of "Attention is All You Need" — built and trained for English to Hindi translation.</p>
         <div class="project-tags"><span class="tag">PyTorch</span><span class="tag">NLP</span></div>
       </a>
+      
       <a href="https://github.com/adkdev200-ops/Analysing-Stocks-using-Transformer" target="_blank" class="card project-card reveal">
         <div class="project-header">
-          <i class="fa-solid fa-chart-line card-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+          <div class="icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+          <i class="fas fa-arrow-up-right-from-square link-icon"></i>
         </div>
         <h3>Stock Predictor</h3>
         <p>Transformer model predicting stock movements from historical data across 100 US companies.</p>
         <div class="project-tags"><span class="tag">ML</span><span class="tag">Finance</span></div>
       </a>
+      
       <a href="https://github.com/adkdev200-ops/Real-time-emotion-detector" target="_blank" class="card project-card reveal">
         <div class="project-header">
-          <i class="fa-solid fa-face-smile card-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+          <div class="icon-wrap"><i class="fa-solid fa-face-smile"></i></div>
+          <i class="fas fa-arrow-up-right-from-square link-icon"></i>
         </div>
         <h3>Emotion Detector</h3>
         <p>Fine-tuned Vision Transformer (ViT) for real-time emotion detection from camera feed.</p>
         <div class="project-tags"><span class="tag">ViT</span><span class="tag">PyTorch</span></div>
       </a>
+      
       <a href="https://github.com/adkdev200-ops/BERT-fine-tuned-for-Sentiment-Analysis" target="_blank" class="card project-card reveal">
         <div class="project-header">
-          <i class="fa-solid fa-comments card-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-link-icon"></i>
+          <div class="icon-wrap"><i class="fa-solid fa-comments"></i></div>
+          <i class="fas fa-arrow-up-right-from-square link-icon"></i>
         </div>
         <h3>BERT Sentiment</h3>
         <p>Fine-tuned BERT on a massive Twitter dataset for production-grade sentiment classification.</p>
@@ -229,144 +241,62 @@
   </section>
 
   <!-- ════════ EXPERIENCE ════════ -->
-  <section class="section" id="experience">
-    <span class="section-label">tail -f /var/log/syslog</span>
-    <h2 class="section-title">System <em>Logs</em></h2>
+  <section class="section bg-alternate" id="experience">
+    <div class="section-header reveal">
+      <h2 class="section-title">Professional Journey</h2>
+      <p class="section-subtitle">My experience in building and scaling technology.</p>
+    </div>
     
     <div class="timeline">
       <div class="timeline-item reveal">
-        <div class="timeline-date">2026 — PRESENT</div>
-        <div class="timeline-title">AI Agent Developer</div>
-        <div class="timeline-desc">Building autonomous AI agents with LangGraph — newsletter automation with self-scheduling, research workflows, and internet monitoring systems (Vanguard).</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026 — PRESENT</div>
+          <h3 class="timeline-title">AI Agent Developer</h3>
+          <p class="timeline-desc">Building autonomous AI agents with LangGraph — newsletter automation with self-scheduling, research workflows, and internet monitoring systems (Vanguard).</p>
+        </div>
       </div>
       <div class="timeline-item reveal">
-        <div class="timeline-date">2025 — 2026</div>
-        <div class="timeline-title">ML & Deep Learning Engineer</div>
-        <div class="timeline-desc">Built Transformers from scratch, fine-tuned BERT & ViT, created stock prediction models using deep learning on real financial data.</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2025 — 2026</div>
+          <h3 class="timeline-title">ML & Deep Learning Engineer</h3>
+          <p class="timeline-desc">Built Transformers from scratch, fine-tuned BERT & ViT, created stock prediction models using deep learning on real financial data.</p>
+        </div>
       </div>
       <div class="timeline-item reveal">
-        <div class="timeline-date">2024 — 2025</div>
-        <div class="timeline-title">Full-Stack Developer</div>
-        <div class="timeline-desc">Developed production web apps with Django, React, and FastAPI — e-commerce platforms, URL shorteners, and social tools.</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024 — 2025</div>
+          <h3 class="timeline-title">Full-Stack Developer</h3>
+          <p class="timeline-desc">Developed production web apps with Django, React, and FastAPI — e-commerce platforms, URL shorteners, and social tools.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ════════ CONTACT ════════ -->
-  <section class="section" id="contact" style="text-align: center; max-width: 800px; padding-bottom: 120px;">
-    <span class="section-label">ping server</span>
-    <h2 class="section-title">Open Connection</h2>
-    <p style="color:var(--muted); margin-bottom: 40px; font-family:'Inter', sans-serif;">System standing by for incoming packets. I'm available for freelance projects, open-source collaborations, or full-time roles.</p>
-    <a href="mailto:adkdev200@gmail.com" class="btn-primary glitch-hover">[ SEND PACKET ]</a>
+  <section class="section" id="contact">
+    <div class="contact-box reveal">
+      <h2>Let's Build Something Great</h2>
+      <p>I'm available for freelance projects, open-source collaborations, or full-time roles. If you have an exciting idea or need an expert on your team, let's talk.</p>
+      <a href="mailto:adkdev200@gmail.com" class="btn-primary">Say Hello <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></a>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>SysAdmin: Dev Adhikari <span class="heart">♥</span> 2026</p>
+    <div class="footer-content">
+      <div class="footer-logo">Dev.</div>
+      <p>&copy; 2026 Dev Adhikari. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com/adkdev200-ops" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dev-adhikari-a9b737382/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
   </footer>
 
 <script>
-// ═══════════════════════════════════════
-//  CUSTOM CURSOR
-// ═══════════════════════════════════════
-const cursorBlock = document.getElementById('cursorBlock');
-const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-
-if (!isTouchDevice) {
-  document.addEventListener('mousemove', (e) => {
-    cursorBlock.style.left = e.clientX + 'px';
-    cursorBlock.style.top = e.clientY + 'px';
-  });
-  
-  document.querySelectorAll('a, button, .glitch-hover').forEach(el => {
-    el.addEventListener('mouseenter', () => cursorBlock.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursorBlock.classList.remove('hover'));
-  });
-} else {
-  cursorBlock.style.display = 'none';
-}
-
-// ═══════════════════════════════════════
-//  MATRIX RAIN
-// ═══════════════════════════════════════
-const canvas = document.getElementById('matrixCanvas');
-const ctx = canvas.getContext('2d');
-
-let width, height;
-let cols;
-let yPos = [];
-
-function initMatrix() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-  cols = Math.floor(width / 20) + 1;
-  yPos = Array(cols).fill(0).map(() => Math.random() * height);
-}
-initMatrix();
-window.addEventListener('resize', initMatrix);
-
-function drawMatrix() {
-  ctx.fillStyle = 'rgba(5, 5, 5, 0.1)';
-  ctx.fillRect(0, 0, width, height);
-
-  ctx.fillStyle = '#00ff41';
-  ctx.font = '14px Fira Code, monospace';
-
-  yPos.forEach((y, ind) => {
-    const text = String.fromCharCode(Math.random() * 128);
-    const x = ind * 20;
-    
-    // Randomly change color to white for "glitch/head" effect
-    if(Math.random() > 0.95) ctx.fillStyle = '#fff';
-    else ctx.fillStyle = '#00ff41';
-
-    ctx.fillText(text, x, y);
-    if (y > 100 + Math.random() * 10000) yPos[ind] = 0;
-    else yPos[ind] = y + 20;
-  });
-}
-setInterval(drawMatrix, 50);
-
-// ═══════════════════════════════════════
-//  TYPING EFFECT (Command Line Style)
-// ═══════════════════════════════════════
-const words = ['AI_Agents.py', 'Transformers.ckpt', 'RAG_Systems.sh', 'Web_Apps.js'];
-const el = document.getElementById('typing');
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeEffect() {
-  const currentWord = words[wordIndex];
-  
-  if(isDeleting) {
-    el.textContent = currentWord.substring(0, charIndex - 1);
-    charIndex--;
-  } else {
-    el.textContent = currentWord.substring(0, charIndex + 1);
-    charIndex++;
-  }
-
-  let typeSpeed = isDeleting ? 30 : 100;
-
-  if(!isDeleting && charIndex === currentWord.length) {
-    typeSpeed = 2000; // Pause at end
-    isDeleting = true;
-  } else if(isDeleting && charIndex === 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    typeSpeed = 500; // Pause before new word
-  }
-  
-  // Random glitch speed variation
-  if(!isDeleting && Math.random() > 0.8) {
-    typeSpeed = 20;
-  }
-
-  setTimeout(typeEffect, typeSpeed);
-}
-setTimeout(typeEffect, 1000);
-
 // ═══════════════════════════════════════
 //  SCROLL REVEALS & NAV SCROLL
 // ═══════════════════════════════════════
@@ -390,7 +320,7 @@ const rObs = new IntersectionObserver(es => es.forEach(e => {
     
     rObs.unobserve(e.target); 
   }
-}), { threshold: 0.1 });
+}), { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 document.querySelectorAll('.reveal').forEach(el => rObs.observe(el));
 
 // ═══════════════════════════════════════
@@ -400,7 +330,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (target) {
+      // Offset for fixed navbar
+      const y = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   });
 });
 </script>
