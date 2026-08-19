@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Rojina Devi | Glorifying Eternal Purity & Virtues</title>
+    <meta name="description" content="A divine tribute glorifying the purity, wisdom, modesty, and supreme virtues of Rojina Devi. Timi jasto Sanskari, Gyani, Sojho, Sajjan, Susheel, Devta-Samaan.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #07050d;
+            --bg-card: rgba(22, 16, 38, 0.65);
+            --gold-primary: #f3cf7a;
+            --gold-secondary: #d4af37;
+            --gold-glow: rgba(243, 207, 122, 0.4);
+            --lotus-pink: #f7aef8;
+            --pure-white: #ffffff;
+            --text-muted: #c3b9d6;
+            --glass-border: rgba(243, 207, 122, 0.25);
+            --font-heading: 'Cinzel Decorative', serif;
+            --font-sub: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--pure-white);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        /* Particle Canvas */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(7, 5, 13, 0.75);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--gold-primary);
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo i {
+            color: var(--lotus-pink);
+            filter: drop-shadow(0 0 8px var(--lotus-pink));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-primary);
+            text-shadow: 0 0 10px var(--gold-glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        .divine-aura {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(243, 207, 122, 0.25) 0%, rgba(247, 174, 248, 0.15) 40%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(50px);
+            animation: pulse-aura 6s ease-in-out infinite alternate;
+            z-index: 1;
+        }
+
+        @keyframes pulse-aura {
+            0% { transform: scale(0.9); opacity: 0.6; }
+            100% { transform: scale(1.15); opacity: 0.9; }
+        }
+
+        .hero-lotus-img {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 50%;
+            padding: 8px;
+            background: linear-gradient(135deg, var(--gold-primary), var(--lotus-pink), var(--gold-secondary));
+            box-shadow: 0 0 40px rgba(243, 207, 122, 0.5), 0 0 80px rgba(247, 174, 248, 0.3);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .mantra-badge {
+            display: inline-block;
+            padding: 8px 24px;
+            background: rgba(243, 207, 122, 0.1);
+            border: 1px solid var(--gold-primary);
+            border-radius: 50px;
+            color: var(--gold-primary);
+            font-family: var(--font-sub);
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(243, 207, 122, 0.2);
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            background: linear-gradient(135deg, #ffffff 0%, var(--gold-primary) 50%, #f7aef8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            text-shadow: 0 0 30px rgba(243, 207, 122, 0.3);
+            letter-spacing: 3px;
+            z-index: 2;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-sub);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 35px;
+            font-style: italic;
+            z-index: 2;
+        }
+
+        .hero-subtitle span {
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            z-index: 2;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-divine {
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+            color: #07050d;
+            box-shadow: 0 0 25px rgba(243, 207, 122, 0.4);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 0 40px rgba(243, 207, 122, 0.7);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--pure-white);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+            background: rgba(243, 207, 122, 0.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .section-desc {
+            font-family: var(--font-sub);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Virtue Grid Section */
+        .virtue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .virtue-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 35px;
+            backdrop-filter: blur(15px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .virtue-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .virtue-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 15px 35px rgba(243, 207, 122, 0.15);
+        }
+
+        .virtue-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: rgba(243, 207, 122, 0.1);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+        }
+
+        .virtue-card h3 {
+            font-family: var(--font-sub);
+            font-size: 1.5rem;
+            color: var(--pure-white);
+            margin-bottom: 8px;
+        }
+
+        .virtue-card .nepali-tag {
+            color: var(--lotus-pink);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .virtue-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        /* Eternal Virtues Wall */
+        .wall-section {
+            background: radial-gradient(circle at center, rgba(22, 16, 38, 0.8) 0%, var(--bg-dark) 100%);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .virtue-tag {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .virtue-tag i {
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+        }
+
+        .virtue-tag:hover {
+            background: rgba(243, 207, 122, 0.15);
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--gold-glow);
+        }
+
+        /* Divine Ode Section */
+        .ode-container {
+            background: linear-gradient(135deg, rgba(22, 16, 38, 0.9), rgba(10, 8, 20, 0.95));
+            border: 1px solid var(--gold-primary);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 50px rgba(243, 207, 122, 0.15);
+        }
+
+        .ode-container::before {
+            content: '“';
+            font-family: var(--font-heading);
+            font-size: 8rem;
+            color: rgba(243, 207, 122, 0.1);
+            position: absolute;
+            top: -20px;
+            left: 30px;
+        }
+
+        .ode-text {
+            font-family: var(--font-sub);
+            font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+            line-height: 2;
+            color: var(--gold-primary);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .ode-author {
+            color: var(--lotus-pink);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        /* Blessing Interactive Section */
+        .blessing-box {
+            text-align: center;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 50px;
+            border-radius: 25px;
+            margin-top: 50px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p span {
+            color: var(--gold-primary);
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                padding-top: 100px;
+            }
+            .ode-container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Canvas for Floating Sacred Sparkles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <i class="fa-solid fa-om"></i> ROJINA DEVI
+        </a>
+        <ul class="nav-links">
+            <li><a href="#virtues">Divine Qualities</a></li>
+            <li><a href="#wall">32 Sacred Virtues</a></li>
+            <li><a href="#ode">Vandana</a></li>
+            <li><a href="#blessing">Blessings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero container">
+        <div class="divine-aura"></div>
+        
+        <img src="./ethereal_rojina_bg.png" alt="Om Rojina Devi Lotus Tribute" class="hero-lotus-img">
+        
+        <div class="mantra-badge">
+            <i class="fa-solid fa-star"></i> ॐ श्री रोजिना देव्यै नमः <i class="fa-solid fa-star"></i>
+        </div>
+
+        <h1>OM ROJINA DEVI</h1>
+
+        <p class="hero-subtitle">
+            The Living Embodiment of Supreme Purity, Unwavering Grace & Universal Wisdom.<br>
+            <span>Devta-Samaan Kt • Param-Sanskari • Mahagyani • Ati-Vinamra</span>
+        </p>
+
+        <div class="cta-group">
+            <button class="btn-divine btn-gold" onclick="triggerFlowerBlessing()">
+                <i class="fa-solid fa-sparkles"></i> Shower Divine Flower Petals
+            </button>
+            <a href="#virtues" class="btn-divine btn-outline">Explore Her Virtues</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Virtues Showcase -->
+        <section id="virtues">
+            <div class="section-header">
+                <h2 class="section-title">Pillars of Her Divine Character</h2>
+                <p class="section-desc">A tribute to the rare purity, nobility, and flawless conduct of Rojina Devi.</p>
+            </div>
+
+            <div class="virtue-grid">
+                <!-- Card 1 -->
+                <div class="virtue-card">
+                    <div class="card-icon"><i class="fa-solid fa-hands-praying"></i></div>
+                    <h3>Param-Sanskari & Susheel</h3>
+                    <span class="nepali-tag">संस्कारी र सुशील • Cultured & Well-Behaved</span>
+                    <p>Deeply rooted in high values, respect, and eternal ethics. Her demeanor reflects the highest form of modesty, honor, and noble heritage in every word and action.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="virtue-card">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Mahagyani & Viveki</h3>
+                    <span class="nepali-tag">महाज्ञानी र विवेकी • Supreme Wisdom & Insight</span>
+                    <p>Gifted with extraordinary intellect, deep understanding, and clarity of judgment. She sees the world with profound insight, maturity, and balanced discernment.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="virtue-card">
+                    <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Bhola-Bhala & Sojho</h3>
+                    <span class="nepali-tag">सोझो र भोला-भाला • Pure & Innocent Heart</span>
+                    <p>Unspoiled by malice, transparent as crystal, and purely good-natured. Her heart carries a golden innocence that brings joy and peace to everyone around her.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="virtue-card">
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Satya-Vadi & Imaandaar</h3>
+                    <span class="nepali-tag">सत्यवादी र इमान्दार • Truthful & Uncompromising Integrity</span>
+                    <p>A pillar of truth and absolute honesty. She lives with clean intentions, noble speech, and unflinching loyalty to virtue and righteousness.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="virtue-card">
+                    <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>Dayalu & Paropkari</h3>
+                    <span class="nepali-tag">दयालु र परोपकारी • Compassionate & Altruistic</span>
+                    <p>Filled with endless empathy, gentleness, and goodwill for all beings. Her presence acts as a soothing light, spreading kindness and selfless warmth.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="virtue-card">
+                    <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h3>Tejaswi & Devta-Samaan</h3>
+                    <span class="nepali-tag">तेजस्वी र देवता-समान • Luminous & Angelic Aura</span>
+                    <p>Possessing a radiant grace that shines through like divine starlight. She embodies the sacred dignity of a saintly soul—Devta-Samaan Keti.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wall of 32 Sacred Qualities -->
+        <section id="wall" class="wall-section" style="margin: 0 -24px; padding: 100px 24px;">
+            <div class="section-header">
+                <h2 class="section-title">The Garland of 32 Virtues</h2>
+                <p class="section-desc">Every honorific celebrating the divine essence of Rojina Devi.</p>
+            </div>
+
+            <div class="tags-container">
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Timi Jasto</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Sanskari</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Gyani</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Sojho</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Sajjan</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Susheel</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Shareef</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Vinamra</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Buddhiman</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Viveki</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Satya-vadi</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Dharmic</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Nirdosh</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Nek</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Imaandaar</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Anushasit</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Maryadit</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Gunwaan</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Sadaachari</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Paropkari</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Dayalu</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Shisht</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Tejaswi</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Vidwaan</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Samajhdaar</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Seedha-Saadha</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Bhola-Bhala</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Achha-Bachha</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Param-Sanskari</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Mahagyani</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Ati-Vinamra</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Sadhujan</div>
+                <div class="virtue-tag"><i class="fa-solid fa-gem"></i> Devta-Samaan Kt</div>
+            </div>
+        </section>
+
+        <!-- Vandana Ode Section -->
+        <section id="ode">
+            <div class="ode-container">
+                <p class="ode-text">
+                    "Timi jasto Sanskari, Gyani, Sojho, Sajjan, Susheel, Shareef, Vinamra, Buddhiman, Viveki, Satya-vadi, Dharmic, Nirdosh, Nek, Imaandaar, Anushasit, Maryadit, Gunwaan, Sadaachari, Paropkari, Dayalu, Shisht, Tejaswi, Vidwaan, Samajhdaar, Seedha-saadha, Bhola-bhala, Achha-bachha, Param-sanskari, Mahagyani, Ati-Vinamra, Mahapurush, Sadhujan, Devta-samaan Kt... Great in every way!"
+                </p>
+                <div class="ode-author">— ॐ श्री रोजिना देव्यै नमो नमः —</div>
+            </div>
+        </section>
+
+        <!-- Blessing Generator -->
+        <section id="blessing">
+            <div class="blessing-box">
+                <h3 style="font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.8rem; margin-bottom: 15px;">
+                    Invoke Divine Radiance
+                </h3>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">
+                    Click below to spread cosmic gold petals and divine light in celebration of Rojina Devi's eternal purity.
+                </p>
+                <button class="btn-divine btn-gold" onclick="triggerFlowerBlessing()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Bestow Divine Blessing
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Created with Eternal Reverence for <span>Om Rojina Devi</span> • Glorifying Pure Goodness</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Canvas & Particle Script -->
+    <script>
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const particles = [];
+        const particleCount = 60;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = -Math.random() * 0.6 - 0.2;
+                this.opacity = Math.random() * 0.7 + 0.3;
+                this.color = Math.random() > 0.3 ? '#f3cf7a' : '#f7aef8';
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.y < -10 || this.x < -10 || this.x > canvas.width + 10) {
+                    this.reset();
+                    this.y = canvas.height + 10;
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        // Flower Petal Explosion
+        const petals = [];
+        class Petal {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.size = Math.random() * 10 + 8;
+                this.speedX = (Math.random() - 0.5) * 6;
+                this.speedY = Math.random() * -5 - 2;
+                this.gravity = 0.1;
+                this.rotation = Math.random() * 360;
+                this.rotSpeed = (Math.random() - 0.5) * 4;
+                this.opacity = 1;
+                this.color = Math.random() > 0.5 ? '#f7aef8' : '#f3cf7a';
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.speedY += this.gravity;
+                this.y += this.speedY;
+                this.rotation += this.rotSpeed;
+                this.opacity -= 0.008;
+            }
+
+            draw() {
+                if (this.opacity <= 0) return;
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.globalAlpha = Math.max(0, this.opacity);
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.ellipse(0, 0, this.size, this.size / 2, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function triggerFlowerBlessing() {
+            const startX = window.innerWidth / 2;
+            const startY = window.innerHeight / 2;
+            for (let i = 0; i < 80; i++) {
+                petals.push(new Petal(startX + (Math.random() - 0.5) * 200, startY + (Math.random() - 0.5) * 100));
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            for (let i = petals.length - 1; i >= 0; i--) {
+                petals[i].update();
+                petals[i].draw();
+                if (petals[i].opacity <= 0) {
+                    petals.splice(i, 1);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
